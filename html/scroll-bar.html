@@ -71,8 +71,9 @@
 </div><!-- /render /info -->
     
  <h2>CSS</h2>
+
  <pre>
- <code id=code-css class="code css" data-clipboard-target="#code-css">
+ <code id="code-css" class="code css">
 /* CSS */
   .scrollbox {
   width: 10em;
@@ -101,11 +102,15 @@
 </code>
 <label>Click to copy to clipboard.</label>
 </pre>
-  
- <h2>HTML</h2>
-  
+<button class="btn" data-clipboard-target="#code-css">
+    <img src="../assets/icons/clipboard.svg" alt="Copy to clipboard">
+</button>
+
+
+<h2>HTML</h2>
+
 <pre>
-<code id=code-html class="code xml" data-clipboard-target="#code-html">
+<code id="code-html" class="code xml">
 <!-- html markup -->
 &lt;div class=&quot;scrollbox scrollbox_delayed&quot; tabindex=&quot;0&quot;&gt; &lt;div class=&quot;scrollbox-content&quot;&gt;
 CONTENT HERE
@@ -114,15 +119,23 @@ CONTENT HERE
 </code>
 <label>Click to copy to clipboard.</label>
 </pre>
+<button class="btn" data-clipboard-target="#code-html">
+    <img src="../assets/icons/clipboard.svg" alt="Copy to clipboard">
+</button>
+
 
 <h2>Javascript</h2>
 <pre>
-<code id=code-javascript class="code javascript" data-clipboard-target="#code-javascript">
+<code id="code-javascript" class="code javascript" data-clipboard-target="#code-javascript">
   // none
 </code>
 <label>There's no JavaScript required for this method.</label>
 </pre>
-  
+<button class="btn" data-clipboard-target="#code-javascript">
+    <img src="../assets/icons/clipboard.svg" alt="Copy to clipboard">
+</button>
+
+
 <h4><em>Note</em></h4>
     <ul class="info notes">
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color" target="_blank">MDN : scrollbar-color</a></li> 
@@ -158,8 +171,6 @@ CONTENT HERE
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js" integrity="sha512-MinqHeqca99q5bWxFNQEQpplMBFiUNrEwuuDj2rCSh1DgeeTXUgvgYIHZ1puBS9IKBkdfLMSk/ZWVDasa3Y/2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js" integrity="sha512-sIqUEnRn31BgngPmHt2JenzleDDsXwYO+iyvQ46Mw6RL+udAUZj2n/u/PGY80NxRxynO7R9xIGx5LEzw4INWJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script  src="../assets/js/script.js"></script>
-<script>
-	hljs.initHighlightingOnLoad();
-</script>
+
 </body>
 </html>
