@@ -1,7 +1,10 @@
-
-(function(){
-    new Clipboard('.code');
-})();
+// Clipboard
+var url = document.location.href;
+    new ClipboardJS('.code', {
+        text: function() {
+    return url;
+  }
+});
 
 
 // Toastr function
