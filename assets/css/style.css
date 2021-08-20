@@ -1,6 +1,7 @@
 :root {
   color-scheme: dark; /* supported on Chrome 81.x and Safari 13.x */
 }
+
 /* 	Use default font-family of Operating Systems */
  @font-face {
 		font-family : system;
@@ -15,6 +16,7 @@
     local("DroidSans"),
     local("Tahoma");
 }
+
 *, *:before, *:after {
     box-sizing 		: inherit;
 }
@@ -32,9 +34,11 @@ body {
     margin          : 20px;
 	text-shadow 	: 1px 1px 0px #000;
 }
+
 a, a:visited { 
 	color 		    : #f1f1f1;
 }
+
 a:active, a:hover, a:focus {
 	color           : darkorange;
 }
@@ -44,10 +48,12 @@ h2 {
 	font-weight 	: 300;
 	margin 			: 1em 0;
 }
+
 h3, h4, h5 {
 	font-size 		: 1.5em;
 	margin 			: 2em 0;
 }
+
 div.info,
 pre {
 	margin-bottom   : 40px;
@@ -69,6 +75,7 @@ pre > label {
 	box-shadow      : 0 1px 5px #151827;
 }
 
+
 header {
     background      : #333642cc;
     border-bottom   : 1px solid #151827cc;
@@ -78,6 +85,8 @@ header {
 	width           : 980px;
 	margin          : 20px auto;
 }
+
+
 h1.title {
 	display         : block;
 	justify-items   : space-around;
@@ -106,7 +115,6 @@ div.ui-tooltip {
     left     		: 2rem;
     z-index  		: 1000;
 }
-
 h1.title:hover ~ div.ui-tooltip {
     background 		: #333642cc;
     border     		: 1px solid #151827cc;
@@ -120,8 +128,8 @@ h1.title:hover ~ div.ui-tooltip {
     opacity    		: 1;
 }
 
-/* ////////// FLEX
-Row and Column */
+
+/* FLEX Row and Column */
 
 .row {
   display           : flex;
@@ -232,7 +240,7 @@ footer > p {
     padding    		: 0 0 2rem;
 }
 
-/* ////////// CSS - CODE SAMPLE
+/* CSS - CODE SAMPLE
 ScrollBar only Visible if Hover */
 
 .scrollbox {
