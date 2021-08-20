@@ -1,1 +1,261 @@
+:root {
+  color-scheme: dark; /* supported on Chrome 81.x and Safari 13.x */
+}
+/* 	Use default font-family of Operating Systems */
+ @font-face {
+		font-family : system;
+		font-style  : normal;
+		font-weight : 300;
+		src         : local(".SFNSText-Light"),
+    local(".HelveticaNeueDeskInterface-Light"),
+    local(".LucidaGrandeUI"),
+    local("Ubuntu Light"),
+    local("Segoe UI Light"),
+    local("Roboto-Light"),
+    local("DroidSans"),
+    local("Tahoma");
+}
+*, *:before, *:after {
+    box-sizing 		: inherit;
+}
 
+body {
+    background      : radial-gradient(circle,
+                      #444852, #1c202a);
+    color           : #abc;
+    /* Use the OS font-family */
+    font-family     : system-ui, 'system',
+                      'Lato', 'Lucida Grande',
+                      'Lucida Sans Unicode', Sans-Serif;
+	font-size       : 15px;
+    line-height     : 20px;
+    margin          : 20px;
+	text-shadow 	: 1px 1px 0px #000;
+}
+a, a:visited { 
+	color 		    : #f1f1f1;
+}
+a:active, a:hover, a:focus {
+	color           : darkorange;
+}
+
+h2 {
+	font-size 		: 2.25em;
+	font-weight 	: 300;
+	margin 			: 1em 0;
+}
+h3, h4, h5 {
+	font-size 		: 1.5em;
+	margin 			: 2em 0;
+}
+div.info,
+pre {
+	margin-bottom   : 40px;
+}
+
+pre,
+code {
+	border-radius   : 5px;
+	}
+pre > .code {	
+	border          : 1px solid #424755;
+	border-radius   : 5px;
+	}
+pre > label {
+	background      : #202227;
+	border          : 1px solid #424755;
+	border-radius   : 5px;
+	padding 		: 10px 20px;
+	box-shadow      : 0 1px 5px #151827;
+}
+
+header {
+    background      : #333642cc;
+    border-bottom   : 1px solid #151827cc;
+    border-radius   : 5px;
+    box-shadow      : 0 0 1px #151827cc;
+    padding         : .5rem 1rem;
+	width           : 980px;
+	margin          : 20px auto;
+}
+h1.title {
+	display         : block;
+	justify-items   : space-around;
+}
+h1.title span.date {
+	background      : #202227;
+	border          : 1px solid #424755;
+	border-radius   : 5px;
+	float           : right;
+	font-size       : 12px;
+	margin          : 0 0;
+	right           : 5px;
+	padding         : 0.5rem 1.5rem;
+	position        : relative;
+    top             :-0.5rem;
+	
+}
+h1.title ~ div.ui-tooltip {
+    transform  		: scale(0);
+    transition 		: all 1s;
+    opacity    		: 0;
+}
+div.ui-tooltip {
+    position        : absolute;
+    top      		: 7rem;
+    left     		: 2rem;
+    z-index  		: 1000;
+}
+
+h1.title:hover ~ div.ui-tooltip {
+    background 		: #333642cc;
+    border     		: 1px solid #151827cc;
+    box-shadow 		: 0px 1px 7px 1px #151827cc;
+    display    		: block;
+    margin     		: 5px 0 0 20px;
+    max-width  		: 360px;
+    padding    		: 1rem;
+    transform  		: scale(1);
+    transition 		: all 1s;
+    opacity    		: 1;
+}
+
+/* ////////// FLEX
+Row and Column */
+
+.row {
+  display           : flex;
+  flex-direction    : row;
+  flex-wrap         : wrap;
+  width             : 100%;
+}
+
+.column {
+  display           : flex;
+  flex-direction    : column;
+  flex-basis        : 100%;
+  flex              : 1;
+}
+
+main.render {
+  /* Blueprint pattern 80x80 square x 12 = 960px */
+	background-color : #333642cc;
+	background-image : linear-gradient(
+	rgba(119, 142, 163, 0.3) 2px,
+	transparent 2px),
+	linear-gradient(90deg, 
+    rgb(119, 142, 163, 0.3) 2px, 
+    transparent 2px),
+	linear-gradient(rgba(119, 142, 163, 0.3) 1px,
+    transparent 1px),
+	linear-gradient(90deg, 
+    rgba(119, 142, 163, 0.3) 1px, 
+    transparent 1px);
+	background-size : 80px 80px, 80px 80px, 
+                       20px 20px, 20px 20px;
+	background-position: -2px -2px, -2px -2px, 
+                       -1px -1px, -1px -1px;
+    box-shadow      : 0px 1px 7px 1px #151827cc;
+    margin          : 2rem auto 4rem;
+    max-width       : 960px;
+    padding         : 20px;
+}
+main.render > p {
+    color           : #f2f2f2;
+    font-size 		: 1.25em;
+}
+.side-nav {
+    align-items     : center;
+    background-color: #151827cc;  
+    border-radius   : 10px 0  0 10px;
+    box-shadow      : -2px 2px 7px 1px #151827cc;
+    color           : #abc;
+    display         : flex;
+    flex-direction  : column;
+    flex-wrap       : wrap;
+    justify-content : center;
+    max-width       : 54px;
+    padding         : 1rem 0; 
+    position        : fixed;
+    right           : -1px;
+    top             : 25%;
+    transition      : all 1s;
+    z-index         : 5;
+}
+.side-nav:hover {
+    box-shadow      : -1px -1px 7px 1px #3f51b5
+}
+.side-nav > .logos > svg {
+    padding         : 1rem 1rem 0 ;
+}
+
+.info {
+	background      : #202227cc;
+	border          : 1px solid #424755cc;
+	box-shadow      : 0px 1px 7px 1px #151827cc;
+	padding         : 20px;
+}
+ul.notes {
+    list-style      : none;
+	column-count    : 2;
+	column-fill     : balance;
+	column-gap      : 2rem;
+	column-rule-color: #424755cc;
+	column-rule-style: dotted;
+	column-rule-width: 4px;
+	column-width    : 200px;    
+    font-size       : .8em;
+    margin          : 20px;
+    padding         : 20px;
+}
+ul.notes li {
+    display         : block;
+    padding         : 10px;
+}
+ul.notes li:hover {
+    background      : #202227cc;
+}
+
+
+footer {
+    background      : #2c303a;
+    box-shadow      : -2px -2px 7px 1px #151827cc;
+    position   		: fixed;
+    left       		: 0px;
+    bottom     		: 0px;
+    height     		: 2rem;
+    width      		: 100%;
+}
+footer > p { 
+    font-size  		: .8rem;
+    text-align 		: center;
+    padding    		: 0 0 2rem;
+}
+
+/* ////////// CSS - CODE SAMPLE
+ScrollBar only Visible if Hover */
+
+.scrollbox {
+  width: 20em;
+  height: 10em;
+  overflow: auto;
+  visibility: hidden;
+}
+
+.scrollbox-content,
+.scrollbox:hover,
+.scrollbox:focus {
+  visibility: visible;
+}
+
+.scrollbox_delayed {
+  transition: visibility 0.5s;
+}
+
+.scrollbox_delayed:hover {
+  transition: visibility 0s 0.5s;
+}
+
+@media (hover: hover) { 
+.scrollbox { visibility: hidden; }
+}
